@@ -13,3 +13,9 @@
 .externalNativeBuild
 .cxx
 local.properties
+
+# Built application files
+*.apk
+
+# Java class files
+*.class
