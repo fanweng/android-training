@@ -1,8 +1,3 @@
-<!--
-This file describes all the components of the Android app.
-The content will be read by the Android runtime system when the app is executed.
--->
-
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.example.myfirstapp">

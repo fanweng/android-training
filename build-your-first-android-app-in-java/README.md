@@ -2,6 +2,12 @@
 
 https://developer.android.com/codelabs/build-your-first-android-app#0
 
+## `AndroidManifest.xml`
+
+This file describes all the components of the Android app.
+
+The content will be read by the Android runtime system when the app is executed.
+
 ## Layout Editor
 
 Each screen in the app is associated with one or more **fragments**.
@@ -15,3 +21,16 @@ Layout is defined in the XML file under the `res/layout/` directory. In the layo
 Every layout must have a **root view** that contains all the other views. The root view is always a **view group**.
 
 In the [fragment_first.xml](./app/src/main/res/layout/fragment_first.xml) file, `ConstraintLayout` is the view group, which contains a `TextView` and a `Button`.
+
+All views must have **layout_width** and **layout_height** properties:
++ `match_parent`: the size of the screen
++ `wrap_content`: just big enough to enclose the content inside the view
++ `match_constraint`: as big as whatever it's constrained to
+
+## Resource
+
+### `values/colors.xml`
+
+A color can be defined as 3 hex numbers (0x00 to 0xFF) representing the red, blue and green components.
+
+Three hex numbers can be also led by an alpha value (0x00 to 0xFF) representing the transparency (0 fully transparent to 100% fully opaque). 
