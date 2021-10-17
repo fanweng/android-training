@@ -8,7 +8,7 @@
     <string name="count_button_text">Count</string>
     <string name="toast_button_text">Toast</string>
     <string name="previous">Previous</string>
-
-    <string name="hello_first_fragment">Hello World!</string>
+    <string name="toast_text">Toast is here</string>
+    <string name="default_num">0</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
 </resources>

@@ -34,3 +34,25 @@ All views must have **layout_width** and **layout_height** properties:
 A color can be defined as 3 hex numbers (0x00 to 0xFF) representing the red, blue and green components.
 
 Three hex numbers can be also led by an alpha value (0x00 to 0xFF) representing the transparency (0 fully transparent to 100% fully opaque). 
+
+## Interact with Views
+
+#### 1. View binding
+
+Enable the feature in the module's `build.gradle` file.
+
+```gradle
+android {
+... ...
+    buildFeatures {
+        viewBinding true
+    }
+}
+```
+
+Binding only does a single pass over the view hierarchy instead of calling `findViewById()` multiple times.
+
+#### 2. View `findViewById()`
+
+It may introduce bugs in Android, e.g. passing an invalid ID in the current layout which leads to a `null` or a crash.
+

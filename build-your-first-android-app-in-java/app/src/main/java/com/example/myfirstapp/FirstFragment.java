@@ -4,6 +4,7 @@ import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
@@ -29,6 +30,7 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
+        // Method 1: use view binding
         binding.randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
@@ -36,6 +38,32 @@ public class FirstFragment extends Fragment {
                         .navigate(R.id.action_FirstFragment_to_SecondFragment);
             }
         });
+
+        // Method 2: use view findViewById
+        view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast myToast = Toast.makeText(getActivity(), R.string.toast_text, Toast.LENGTH_SHORT);
+                myToast.show();
+            }
+        });
+
+        view.findViewById(R.id.count_button).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                countUpdate(view);
+            }
+        });
+    }
+
+    private void countUpdate(View view) {
+        // Get the value of the text view using view binding
+        String countString = binding.numTextview.getText().toString();
+        // Convert value to a number and increment it
+        Integer count = Integer.parseInt(countString);
+        count++;
+        // Display the new value in the text view.
+        binding.numTextview.setText(count.toString());
     }
 
     @Override
@@ -43,5 +71,4 @@ public class FirstFragment extends Fragment {
         super.onDestroyView();
         binding = null;
     }
-
 }
