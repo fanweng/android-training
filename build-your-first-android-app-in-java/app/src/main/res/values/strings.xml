@@ -10,5 +10,5 @@
     <string name="previous">Previous</string>
     <string name="toast_text">Toast is here</string>
     <string name="default_num">0</string>
-    <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
+    <string name="second_fragment_header">Here is a random number between 0 and %d.</string>
 </resources>

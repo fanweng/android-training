@@ -30,16 +30,23 @@ public class FirstFragment extends Fragment {
     public void onViewCreated(@NonNull View view, Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
 
-        // Method 1: use view binding
+        // Method 1: use view binding, which parse the random_button ID to randomButton
         binding.randomButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                NavHostFragment.findNavController(FirstFragment.this)
-                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+                // get the value from current num_textview
+                int curCount = Integer.parseInt(binding.numTextview.getText().toString());
+
+//                NavHostFragment.findNavController(FirstFragment.this)
+//                        .navigate(R.id.action_FirstFragment_to_SecondFragment);
+
+                // create an action with the argument
+                FirstFragmentDirections.ActionFirstFragmentToSecondFragment action = FirstFragmentDirections.actionFirstFragmentToSecondFragment(curCount);
+                NavHostFragment.findNavController(FirstFragment.this).navigate(action);
             }
         });
 
-        // Method 2: use view findViewById
+        // Method 2: use view findViewById to get the toast_button
         view.findViewById(R.id.toast_button).setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
