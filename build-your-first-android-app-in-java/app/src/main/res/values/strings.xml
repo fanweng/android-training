@@ -4,7 +4,9 @@
     <!-- Strings used for fragments for navigation -->
     <string name="first_fragment_label">First Fragment</string>
     <string name="second_fragment_label">Second Fragment</string>
-    <string name="next">Next</string>
+    <string name="random_button_text">Random</string>
+    <string name="count_button_text">Count</string>
+    <string name="toast_button_text">Toast</string>
     <string name="previous">Previous</string>
 
     <string name="hello_first_fragment">Hello World!</string>
