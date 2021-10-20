@@ -2,7 +2,7 @@
 
 An activity is a single, focused thing that users can do.
 
-Typically it has a [[layout]] associated with.
+Typically it has a [[Layout]] associated with.
 
 Defined in a Java class, e.g. `MainActivity.java`.
 
