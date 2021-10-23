@@ -25,7 +25,7 @@ https://developer.android.com/guide/components/activities/intro-activities.html
 
 ## Activity lifecycle
 
-A new activity starts -> previous activity is stopped -> system preserves the activity in the **back stack** -> current activity is done -> current activity is popped from stack and destroyed -> previous stack resumes
+A new activity starts -> previous activity is stopped -> system preserves the activity in the **[[Navigation#Back Stack]]** -> current activity is done -> current activity is popped from stack and destroyed -> previous stack resumes
 
 The activity will be notified by activity lifecycle callback methods `onCreate()`, `onStart()`, `onResume()`, `onPause()`, `onStop()`.
 
