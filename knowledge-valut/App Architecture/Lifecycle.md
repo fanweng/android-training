@@ -120,7 +120,7 @@ It can happen when:
 + `finish()` called in the `Activity` to manually shut it down
 + user navigate back to the previous `Activity`
 + in low memory situation in which system would reclaim any *Stopped* `Activity` to free up the resources
-+ a device configuration change occurs
++ a device [[Config Change]] occurs
 
 `onDestroy()` should NOT be used to save any required data. Use `onPause()` and `onStop()` instead.
 
