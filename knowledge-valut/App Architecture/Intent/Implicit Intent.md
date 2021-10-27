@@ -47,3 +47,28 @@ if (sendIntent.resolveActivity(getPackageManager()) != null) {
     startActivity(chooser);
 }
 ```
+
+
+
+## Receive an implict intent
+
+### Define `Intent` filter
+`<intent-filter>` elements in the `AndroidManifest.xml` tells the system what `Intent` can be accepted by this `Activity`.
+
+An `Intent` filter may contain the follwoing elements:
++ `<action>`: action that the activity accepts
++ `<data>`: type of data accepted, e.g. MIME or URI
++ `<category>`
+
+```xml
+<activity android:name="ShareActivity">
+    <intent-filter>
+        <action android:name="android.intent.action.SEND"/>
+        <category android:name="android.intent.category.DEFAULT"/>
+        <data android:mimeType="text/plain"/>
+    </intent-filter>
+</activity>
+```
+
+### Handle the received `Intent`
+Same as they way of [[Explicit Intent#Retrieve the data from the intent in the started activity]]
