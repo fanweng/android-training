@@ -19,3 +19,20 @@ Android system reads the app's `AndroidManifest.xml` file, so it knows the `acti
 
 </manifest>
 ```
+
+
+
+## Activity Attributes
+```java
+<activity
+   android:name=".SecondActivity"
+   android:label="@string/activity2_name"
+   android:parentActivityName=".MainActivity"
+   android:launchMode="standard">
+   android:taskAffinity="com.example.android.myapp.newtask">
+   <!-- More attributes ... -->
+</activity>
+```
+
++ Task affinity
+Indicate which task an `Activity` prefers to belong to when that `Activity` instance is launched. By default, each `Activity` belongs to the app that launched it.
