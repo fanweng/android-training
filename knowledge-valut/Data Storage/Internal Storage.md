@@ -45,3 +45,11 @@ public File getTempFile(Context context, String url) {
     return file;
 }
 ```
+
+
+
+## Delete files
+For files on the internal storage, ask the `Context` to locate and delete the file.
+```java
+myContext.deleteFile(fileName);
+```
