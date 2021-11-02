@@ -1,7 +1,7 @@
 # Data Storage
 
 ## Options
-+ Shared preferences
++ [[Shared Preferences]]
 + [[File]]
 	* Internal Storage
 	* External Storage
