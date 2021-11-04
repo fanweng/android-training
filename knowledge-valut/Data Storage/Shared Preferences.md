@@ -45,3 +45,74 @@ protected void onPause() {
 ```
 
 `apply()` writes out the changes asynchronously. `commit()` synchronously saves the preferences but it is not ideal to use because it can block other operations.
+
+### Restore shared preferences
+
+Restore shared preferences in the [[Activity#onCreate]]. The `get*()` method takes two arguments: `key` and a default value if the `key` cannot be found.
+```java
+mPreferences = getSharedPreferences(sharedPrefFile, MODE_PRIVATE);
+if (savedInstanceState != null) {
+    mCount = mPreferences.getInt("count", 1);
+    mCurrentColor = mPreferences.getString("color", "white");
+}
+```
+
+### Clear shared prereferences
+
+Calls to `put()` and `clear()` can be combined. But when `apply()`, the `clear()` is *ALWAYS* done first, regardless of whether you called `clear()` before or after the `put()` method in the editor.
+```java
+SharedPreferences.Editor preferencesEditor = mPreferences.edit();
+preferencesEditor.putInt("number", 42);
+preferencesEditor.clear();
+preferencesEditor.apply();
+```
+
+### Listen for preference changes
+
+Register the `SharedPreferences.OnSharedPreferenceChangeListener` in the [[Lifecycle#Resumed Running state onResume]]. Unregister it in the [[Lifecycle#Paused state onPause]] callback.
+```java
+@Override
+protected void onResume() {
+    super.onResume();
+    getPreferenceScreen().getSharedPreferences()
+            .registerOnSharedPreferenceChangeListener(this);
+}
+
+@Override
+protected void onPause() {
+    super.onPause();
+    getPreferenceScreen().getSharedPreferences()
+            .unregisterOnSharedPreferenceChangeListener(this);
+}
+```
+
+The `SharedPreferences.OnSharedPreferenceChangeListener` interface only has one callback method `onSharedPreferenceChanged()`. Implement the interface as a part of your activity.
+```java
+public class SettingsActivity extends PreferenceActivity
+                              implements OnSharedPreferenceChangeListener {
+    public static final String KEY_PREF_SYNC_CONN = "pref_syncConnType";
+
+    // ...
+
+    public void onSharedPreferenceChanged(SharedPreferences sharedPreferences, String key) {
+        if (key.equals(KEY_PREF_SYNC_CONN)) {
+            Preference connectionPref = findPreference(key);
+            connectionPref.setSummary(sharedPreferences.getString(key, ""));
+        }
+    }
+}
+```
+
+When registering the callback, the preference manager doesn't currently store a reference to the listener. We must hold onto a reference to the listener, or it will be susceptible to garbage collection.
+
+Keep a reference to the listener as a class memeber variable in an object such as an activity that will exist as long as you need the listener.
+```java
+SharedPreferences.OnSharedPreferenceChangeListener listener =
+    new SharedPreferences.OnSharedPreferenceChangeListener() {
+       public void onSharedPreferenceChanged(SharedPreferences prefs, String key) {
+          // listener implementation
+       }
+};
+
+prefs.registerOnSharedPreferenceChangeListener(listener);
+```
