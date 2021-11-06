@@ -374,7 +374,7 @@ public class NativeAudio extends Activity
         recordAudio();
     }
 
-    /** Native methods, implemented in jni folder */
+    /** Native methods, implemented in src/main/cpp/native-audio-jni.c **/
     public static native void createEngine();
     public static native void createBufferQueueAudioPlayer(int sampleRate, int samplesPerBuf);
     public static native boolean createAssetAudioPlayer(AssetManager assetManager, String filename);

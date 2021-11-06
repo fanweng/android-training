@@ -67,7 +67,7 @@ static SLVolumeItf bqPlayerVolume;
 static SLmilliHertz bqPlayerSampleRate = 0;
 static jint   bqPlayerBufSize = 0;
 static short *resampleBuf = NULL;
-// a mutext to guard against re-entrance to record & playback
+// a mutex to guard against re-entrance to record & playback
 // as well as make recording and playing back to be mutually exclusive
 // this is to avoid crash at situations like:
 //    recording is in session [not finished]
