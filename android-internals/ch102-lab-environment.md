@@ -47,6 +47,8 @@ All possible branches in the `android/platform/manifest.xml`: https://android.go
 
 2. Build AOSP for specific device
 
+Build the cuttlefish images.
+
 ```sh
 $ cd ~/aosp
 $ source build/envsetup.sh
@@ -54,7 +56,37 @@ $ lunch aosp_cf_x86_phone-userdebug
 $ m -j8
 ```
 
-Some other useful commands:
+After the build succeeds, a [*super.img*](https://source.android.com/devices/tech/ota/dynamic_partitions/implement) should be generated inside `out/target/product/vsoc_x86/` folder. The *super.img* contains:
++ *system.img*
++ *vendor.img*
++ *product.img*
+
+3. Boot the cuttlefish image
+
+Install the *acloud* command. And **reboot** the Ubuntu after the installation.
+
+```sh
+$ acloud setup --host
+("y" to all...)
+```
+
+Log in back to Ubuntu, and start the cuttlefish image with *acloud*.
+
+```sh
+$ cd ~/aosp
+$ source build/envsetup.sh
+$ lunch aosp_cf_x86_phone-userdebug
+$ printconfig
+...
+TARGET_PRODUCT=aosp_cf_x86_phone
+
+$ acloud create --local-instance 1 --local-image
+(Phone interface should show up later...)
+```
+
+#### Some other useful commands
+
+AOSP:
 
 ```sh
 $ source build/envsetup.sh
@@ -63,4 +95,13 @@ $ lunch         # list out all images/build can be built
 $ gomod <mod>   # navigate to the directory of a module
 $ outmode <mod> # return the output file for the module
 $ croot         # navigate to the aosp directory
+```
+
+[acloud](https://android.googlesource.com/platform/tools/acloud/+/refs/heads/master/README.md):
+
+```sh
+$ acloud create --local-instance 1 --local-image
+$ acloud list
+[1]device serial: 0.0.0.0:6520 (local-instance-1) elapsed time: None
+$ acloud delete --instance-names local-instance-1
 ```
