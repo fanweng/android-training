@@ -1,6 +1,6 @@
 # Security Basics
 
-## User ID and Discretionary Access Control
+## User ID and Discretionary Access Control (DAC)
 
 #### Linux User ID
 
@@ -46,3 +46,13 @@ $ adb shell ps -A | grep your_package_name
 + confines flawed/malicious apps as well as system processes (including those that run as root!)
     * prevents privilege escalation
 + centralized/manageable device-wide policy
+
+```sh
+$ adb shell
+vsoc_x86:/ $ id
+uid=2000(shell) ... context=u:r:shell:s0
+```
+
+## Private Application Files
+
+`/data/data` is used by different apps to access their private files and is using DAC to enforce access.
