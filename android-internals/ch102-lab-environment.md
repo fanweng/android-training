@@ -63,14 +63,14 @@ After the build succeeds, a [*super.img*](https://source.android.com/devices/tec
 
 3. Boot the cuttlefish image
 
-Install the *acloud* command. And **reboot** the Ubuntu after the installation.
+Install the `acloud` command. And **reboot** the Ubuntu after the installation.
 
 ```sh
 $ acloud setup --host
 ("y" to all...)
 ```
 
-Log in back to Ubuntu, and start the cuttlefish image with *acloud*.
+Log in back to Ubuntu, and start the cuttlefish image with `acloud`.
 
 ```sh
 $ cd ~/aosp
@@ -90,8 +90,8 @@ After launching the cuttlefish image, enable the *Developer options* by Settings
 
 Enable several options (USB debugging, Show taps, Strict mode enabled, Show background ANRs) under Settings -> System -> Developer options.
 
-There are three ways that we can use *adb* command to access the Android shell:
-+ in the terminal where we run the *lunch* command
+There are three ways that we can use `adb` command to access the Android shell:
++ in the terminal where we run the `lunch` command
 + add `export PATH="$PATH:$HOME/aosp/out/soong/host/linux-x86/bin"` to the `~/.bashrc`
 + download and `tar -xvf adb.tar.gz` the executable from [here](https://drive.google.com/file/d/19BPwQAsQhKVzisp0e9cXc7AclgRzKx2Z/view)
 
