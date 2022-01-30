@@ -126,7 +126,18 @@ $ acloud delete --instance-names local-instance-1
 
 ```sh
 $ adb shell
-$ id (show UID of current user)
-$ su (change to super user)
-$ exit
+vsoc_x86:/ $ id (show UID of current user)
+vsoc_x86:/ $ su (change to super user)
+vsoc_x86:/ $ su system (change to system user)
+vsoc_x86:/ $ exit
+```
+
+If we have multiple devices/emulators connected, use `-s` option to access them separately.
+
+```
+$ adb devices
+RFCN90Y635Z     device (a real phone)
+0.0.0.0:6520    device (cuttlefish VM)
+$ adb shell -s RFCN90Y635Z shell
+$ adb shell -s 0.0.0.0:6520 shell
 ```
