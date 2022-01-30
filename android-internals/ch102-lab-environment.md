@@ -84,9 +84,25 @@ $ acloud create --local-instance 1 --local-image
 (Phone interface should show up later...)
 ```
 
+4. Developer options
+
+After launching the cuttlefish image, enable the *Developer options* by Settings -> About phone -> Click Build number for 7 times.
+
+Enable several options (USB debugging, Show taps, Strict mode enabled, Show background ANRs) under Settings -> System -> Developer options.
+
+There are three ways that we can use *adb* command to access the Android shell:
++ in the terminal where we run the *lunch* command
++ add `export PATH="$PATH:$HOME/aosp/out/soong/host/linux-x86/bin"` to the `~/.bashrc`
++ download and `tar -xvf adb.tar.gz` the executable from [here](https://drive.google.com/file/d/19BPwQAsQhKVzisp0e9cXc7AclgRzKx2Z/view)
+
+```sh
+$ adb devices
+$ adb shell
+```
+
 #### Some other useful commands
 
-AOSP:
++ AOSP:
 
 ```sh
 $ source build/envsetup.sh
@@ -97,11 +113,20 @@ $ outmode <mod> # return the output file for the module
 $ croot         # navigate to the aosp directory
 ```
 
-[acloud](https://android.googlesource.com/platform/tools/acloud/+/refs/heads/master/README.md):
++ [acloud](https://android.googlesource.com/platform/tools/acloud/+/refs/heads/master/README.md):
 
 ```sh
 $ acloud create --local-instance 1 --local-image
 $ acloud list
 [1]device serial: 0.0.0.0:6520 (local-instance-1) elapsed time: None
 $ acloud delete --instance-names local-instance-1
+```
+
++ ADB:
+
+```sh
+$ adb shell
+$ id (show UID of current user)
+$ su (change to super user)
+$ exit
 ```
