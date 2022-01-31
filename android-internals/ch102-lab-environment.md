@@ -148,3 +148,11 @@ vsoc_x86:/ $ su system (change to system user)
 
 vsoc_x86:/ $ dmesg (show Linux kernel messages in the ring buffer)
 ```
+
++ Tools:
+
+```sh
+# verify if two files are the same
+$ md5sum kernel/prebuilts/5.10/x86_64/kernel-5.10
+$ md5sum out/target/product/vsoc_x64/kernel
+```

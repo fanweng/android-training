@@ -12,7 +12,8 @@ GKI | Generic Kernel Image
 GSI | Generic System Image
 GMS | Google Mobile Services
 HIDL | HAL Interface Definition Language
-JNI | Jave Native Interface
+JNI | Java Native Interface
+KMI | Kernel Module Interface
 MAC | Mandatory Access Control
 ODM | Original Design Manufacturer
 OTA | Over-the-Air
