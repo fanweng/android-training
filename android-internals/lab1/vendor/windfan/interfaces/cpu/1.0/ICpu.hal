@@ -1,0 +1,6 @@
+package vendor.windfan.cpu@1.0;
+
+interface ICpu {
+    getScalingGovernor() generates (string scalingGovernor);
+    setScalingGovernor(string governor) generates (bool success);
+};

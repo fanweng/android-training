@@ -1,0 +1,12 @@
+hidl_interface {
+    name: "vendor.windfan.cpu@1.0",
+    root: "vendor.windfan",
+    srcs: [
+        "ICpu.hal",
+    ],
+    interfaces: [
+        "android.hidl.base@1.0",
+    ],
+    gen_java: true,
+    product_specific: true,
+}
