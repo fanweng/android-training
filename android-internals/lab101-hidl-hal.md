@@ -156,6 +156,16 @@ $(call inherit-product, device/google/cuttlefish/shared/device.mk)
 $(call inherit-product, device/google/cuttlefish/shared/windfan.mk) // add this line
 ```
 
+3. Run AOSP build and check outputs
+
+```sh
+/aosp/out/target/product/vsoc_x86$ find . | grep  windfan
+./product/lib/vendor.windfan.cpu@1.0.so
+./symbols/product/lib/vendor.windfan.cpu@1.0.so
+./obj/SHARED_LIBRARIES/vendor.windfan.cpu@1.0_intermediates
+./obj/SHARED_LIBRARIES/vendor.windfan.cpu@1.0_intermediates/vendor.windfan.cpu@1.0.so
+```
+
 
 
 ## Appendix
