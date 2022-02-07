@@ -137,6 +137,27 @@ _hidl_transact_err = ::android::hardware::IInterface::asBinder(_hidl_this)->tran
 
 
 
+## Include the Custom HAL Module in the Android Makefile
+
+1. Create a makefile for the module above
+
+Src: [device/google/cuttlefish/shared/windfan.mk](./lab1/device/google/cuttlefish/shared/windfan.mk)
+```makefile
+PRODUCT_PACKAGES += \
+    vendor.windfan.cpu@1.0
+```
+
+2. Include the custom makefile in the original Android build
+
+Src: [device/google/cuttlefish/shared/phone/device_vendor.mk](./lab1/device/google/cuttlefish/shared/phone/device_vendor.mk)
+
+```makefile
+$(call inherit-product, device/google/cuttlefish/shared/device.mk)
+$(call inherit-product, device/google/cuttlefish/shared/windfan.mk) // add this line
+```
+
+
+
 ## Appendix
 
 #### Package prefixes and locations
