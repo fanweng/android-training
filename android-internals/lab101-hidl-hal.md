@@ -1,4 +1,4 @@
-# Vendor HIDL Lab 101: HIDL HAL
+# Vendor HIDL Lab 101: HIDL HAL Interface
 
 **Objective:** creating the HAL API using HIDL
 
