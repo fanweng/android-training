@@ -1,6 +1,7 @@
 Acronym | Full Name
 ------- | ---------
 AIDL | Android Interface Definition Language
+ALSA | Advanced Linux Sound Architecture
 AOSP | Android Open Source Project
 ART | Android Runtime
 AVB | Audio Video Bridging
@@ -16,6 +17,7 @@ JNI | Java Native Interface
 KMI | Kernel Module Interface
 MAC | Mandatory Access Control
 ODM | Original Design Manufacturer
+OSS | Open Sound System
 OTA | Over-the-Air
 URI | Uniform Resource Identifier
 VTS | Vendor Test Suite
