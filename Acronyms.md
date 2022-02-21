@@ -16,6 +16,7 @@ HIDL | HAL Interface Definition Language
 JNI | Java Native Interface
 KMI | Kernel Module Interface
 MAC | Mandatory Access Control
+NBAIO | Non-Blocking Audio I/O Interface
 ODM | Original Design Manufacturer
 OSS | Open Sound System
 OTA | Over-the-Air
