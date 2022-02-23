@@ -20,7 +20,7 @@
 
 ## Starting AudioFlinger
 
-`init.rc` boot script starts the `mediaserver`.
+`init.rc` boot script starts the `mediaserver` (`frameworks/av/media/mediaserver/main_mediaserver.cpp`).
 
 `mediaserver` starts all **native layer services**, including `AudioFlinger`, `AudioPolicyService`, etc.
 
