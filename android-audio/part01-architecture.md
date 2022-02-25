@@ -50,9 +50,15 @@ It aims to:
 
 HAL is directly accessed by *AudioFlinger* to talk to the device driver in the kernel space.
 
-#### Framework
+#### Services
+
+AudioPolicyService, AudioFlinger
+
+#### Native/Application Framework
 
 Android provides useful classes and services for controlling audio system.
+
+AudioTrack, AudioRecord, AudioSystem
 
 #### Application
 
