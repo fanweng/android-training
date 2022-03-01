@@ -59,3 +59,30 @@ Smallest buffer = lowest num of frames * num of channels * sampling depth in byt
     * can accept a large delay
 + `AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD`
     * need to be output to a HW decoder for decoding
+
+### 2.2 Output Stream Devices
+
+| AudioTrack | AudioFlinger | AudioHAL | ALSA/ASoc | Device |
+|------------|--------------|----------|-----------|--------|
+| AUDIO_OUTPUT_FLAG_PRIMARY          | MixerThread             | primary_out | PCM Driver | Audio Codec |
+| AUDIO_OUTPUT_FLAG_FAST             | MixerThread (FastMixer) | low_latency | PCM Driver | Audio Codec |
+| AUDIO_OUTPUT_FLAG_DEEP_BUFFER      | MixerThread             | deep_buffer | PCM Driver | Audio Codec |
+| AUDIO_OUTPUT_FLAG_COMPRESS_OFFLOAD | OffloadThread           | compress_offload | Offload Driver | Audio DSP (then to Codec) |
+| AUDIO_OUTPUT_FLAG_DIRECT           | DirectOutputThread      | multi_channel | HDMI Driver | n/a |
+
+## 3. AudioTrack Data Writing
+
++ Ring FIFO
+    * abnormal states
+        - **Block:** AudioFlinger doesn't read data for a long time, AudioTrack can't have free space to write
+        - **Underrun:** writing data cannot keep up with reading speed, AudioFlinger cannot obtain data in time
+
++ AudioTrack
+    * finds a free space in the FIFO: `obtainBuffer()`
+    * writes the audio data: `memcpy()`
+    * updates the writing position: `releaseBuffer()`
+
++ AudioFlinger
+    * finds a readable data block in the FIFO
+    * copies the data to the destination buffer
+    * updates the reading position
