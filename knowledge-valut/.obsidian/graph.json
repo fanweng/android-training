@@ -1,0 +1,22 @@
+{
+  "collapse-filter": false,
+  "search": "path:android-platform",
+  "showTags": false,
+  "showAttachments": false,
+  "hideUnresolved": false,
+  "showOrphans": true,
+  "collapse-color-groups": false,
+  "colorGroups": [],
+  "collapse-display": false,
+  "showArrow": true,
+  "textFadeMultiplier": 0.2,
+  "nodeSizeMultiplier": 1.10381944444444,
+  "lineSizeMultiplier": 1.69930555555556,
+  "collapse-forces": false,
+  "centerStrength": 0.586805555555556,
+  "repelStrength": 10,
+  "linkStrength": 1,
+  "linkDistance": 250,
+  "scale": 1.6600228795504766,
+  "close": true
+}

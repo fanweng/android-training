@@ -1,0 +1,9 @@
+{
+  "alwaysUpdateLinks": true,
+  "promptDelete": true,
+  "legacyEditor": false,
+  "livePreview": false,
+  "foldIndent": true,
+  "showLineNumber": true,
+  "spellcheck": true
+}

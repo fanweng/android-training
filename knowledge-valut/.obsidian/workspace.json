@@ -1,0 +1,177 @@
+{
+  "main": {
+    "id": "9dcccbd90187c898",
+    "type": "split",
+    "children": [
+      {
+        "id": "14c8c2cce92b9d06",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "c05158c61b01c4dd",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "android-platform/hal.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "a50f12fd48b6b4d0",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "android-platform/hidl.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          },
+          {
+            "id": "9212b9058c336960",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "android-platform/example-hal-hidl.md",
+                "mode": "source",
+                "source": true
+              }
+            }
+          }
+        ],
+        "currentTab": 2
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d4852114a8e97368",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d70137b554406ae",
+        "type": "tabs",
+        "dimension": 64.14285714285714,
+        "children": [
+          {
+            "id": "fc190d654d61e147",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "01e625b74bee8860",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "b09f4e7f2294264f",
+        "type": "tabs",
+        "dimension": 35.85714285714286,
+        "children": [
+          {
+            "id": "669c15b89b8b3b4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 238.5
+  },
+  "right": {
+    "id": "6a9253902c292982",
+    "type": "split",
+    "children": [
+      {
+        "id": "96f62909509845ad",
+        "type": "tabs",
+        "dimension": 57.72357723577236,
+        "children": [
+          {
+            "id": "50bca2f97f934df8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": false
+              }
+            }
+          },
+          {
+            "id": "1f0b9e430b93d71c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          }
+        ]
+      },
+      {
+        "id": "0569cd6ebfc705b2",
+        "type": "tabs",
+        "dimension": 42.27642276422765,
+        "children": [
+          {
+            "id": "3bcfe2405e6757b6",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 858.5
+  },
+  "active": "3bcfe2405e6757b6",
+  "lastOpenFiles": [
+    "android-platform/example-hal-hidl.md",
+    "android-platform/hidl.md",
+    "android-platform/hal.md",
+    "android-platform/linux-kernel.md",
+    "build-process/android-build-system.md",
+    "android-platform/security.md",
+    "android-platform/aosp.md",
+    "build-process/gradle.md",
+    "build-process/APK.md",
+    "android-platform/os-architecture.md"
+  ]
+}

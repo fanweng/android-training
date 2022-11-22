@@ -1,0 +1,123 @@
+{
+  "main": {
+    "id": "9dcccbd90187c898",
+    "type": "split",
+    "children": [
+      {
+        "id": "b263ea7292dcf431",
+        "type": "leaf",
+        "state": {
+          "type": "markdown",
+          "state": {
+            "file": "Artists/Cassatt M/Marry Cassatt.md",
+            "mode": "source",
+            "source": true
+          }
+        }
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "d4852114a8e97368",
+    "type": "split",
+    "children": [
+      {
+        "id": "6d70137b554406ae",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "fc190d654d61e147",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {}
+            }
+          },
+          {
+            "id": "01e625b74bee8860",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 214.5
+  },
+  "right": {
+    "id": "6a9253902c292982",
+    "type": "split",
+    "children": [
+      {
+        "id": "96f62909509845ad",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "50bca2f97f934df8",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "Artists/Cassatt M/Marry Cassatt.md",
+                "collapseAll": true,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "669c15b89b8b3b4d",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "Artists/Cassatt M/Marry Cassatt.md"
+              }
+            }
+          },
+          {
+            "id": "1f0b9e430b93d71c",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 203.5
+  },
+  "active": "b263ea7292dcf431",
+  "lastOpenFiles": [
+    "Artists/Caillebotte G/Gustave Caillebotte.md",
+    "Impressionism/Divisionism.md",
+    "Artists/Seurat G/Georges Seurat.md",
+    "Artists/Signac P/Paul Signac.md",
+    "Impressionism/Neo-Impressionism.md",
+    "Impressionism/Post-Impressionism.md",
+    "Impressionism/Pointillism.md",
+    "Impressionism/Impressionism.md",
+    "Artists/Signac P/paintings/The_Miliners_Paul_Signac_1885_1886.jpg",
+    "Cubism.md"
+  ]
+}
