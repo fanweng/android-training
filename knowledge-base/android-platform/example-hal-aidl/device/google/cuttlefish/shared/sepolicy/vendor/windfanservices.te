@@ -1,0 +1,17 @@
+# WindfanServices app
+type windfanservices, domain;
+app_domain(windfanservices)
+gpu_access(windfanservices)
+
+allow windfanservices hal_cpu_hwservice:hwservice_manager find;
+allow windfanservices hal_cpu_default:binder call;
+
+# Use system services exposed as part of Android framework public API
+allow windfanservices app_api_service:service_manager find;
+
+# Read and write /data/data subdirectory (for its app-private persistent data).
+allow windfanservices app_data_file:dir create_dir_perms;
+allow windfanservices app_data_file:{ file lnk_file } create_file_perms;
+
+allow windfanservices cpu_service:service_manager find;
+allow windfanservices hal_cpu_service:binder call;

@@ -1,0 +1,29 @@
+android_app {
+    name: "WindfanServices",
+    certificate: "platform", // to be a persistent app
+    system_ext_specific: true,
+    platform_apis: true,
+
+    jni_libs: ["libwindfan"],
+
+    libs: [
+        "com.windfan",
+    ],
+
+    static_libs: [
+        "android.hidl.base-V1.0-java",
+        "vendor.windfan.cpu-V1.0-java",
+        "vendor.windfan.cpu-V1-java",
+        "androidx-constraintlayout_constraintlayout",
+        "androidx-constraintlayout_constraintlayout-solver",
+    ],
+
+    // package native libs in the APK
+    use_embedded_native_libs: true,
+
+    resource_dirs: ["res"],
+
+    srcs: [
+        "src/java/**/*.java",
+    ],
+}

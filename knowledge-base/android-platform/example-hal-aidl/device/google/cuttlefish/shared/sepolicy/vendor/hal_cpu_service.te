@@ -1,0 +1,8 @@
+type hal_cpu_service, domain;
+type hal_cpu_service_exec, exec_type, vendor_file_type, file_type;
+
+init_daemon_domain(hal_cpu_service);
+vndbinder_use(hal_cpu_service);
+add_service(hal_cpu_service, cpu_service)
+allow hal_cpu_service servicemanager:binder { call transfer };
+allow hal_cpu_service sysfs_devices_system_cpu:file write;

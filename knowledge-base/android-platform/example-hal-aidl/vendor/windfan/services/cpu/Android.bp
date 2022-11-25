@@ -1,0 +1,27 @@
+cc_binary {
+    name: "vendor.windfan.cpu-service",
+    vendor: true,
+    relative_install_path: "hw",
+    init_rc: ["vendor.windfan.cpu-service.rc"],
+    vintf_fragments: ["vendor.windfan.cpu-service.xml"],
+
+    srcs: [
+        "service.cpp",
+        "Cpu.cpp",
+    ],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+    ],
+
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libhardware",
+        "libbinder_ndk",
+        "libbinder",
+        "libutils",
+        "vendor.windfan.cpu-V1-ndk_platform",
+    ],
+}

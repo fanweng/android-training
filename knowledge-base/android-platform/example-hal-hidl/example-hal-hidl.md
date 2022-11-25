@@ -17,6 +17,7 @@
 + HIDL Interface - `vendor/lib/vendor.intfacename.featurename@1.0.so`
   + hidl_interface (`.so`)
   + generate Binder Proxy (*Bp*) and Binder Native (*Bn*)
+  + introduced in Android 8
 + Linux Kernel Driver/Service
 
 ## Create HIDL HAL Interfaces
