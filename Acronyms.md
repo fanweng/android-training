@@ -2,6 +2,7 @@ Acronym | Full Name
 ------- | ---------
 AIDL | Android Interface Definition Language
 ALSA | Advanced Linux Sound Architecture
+ANR | Application Not Responding
 AOSP | Android Open Source Project
 ART | Android Runtime
 AVB | Audio Video Bridging
