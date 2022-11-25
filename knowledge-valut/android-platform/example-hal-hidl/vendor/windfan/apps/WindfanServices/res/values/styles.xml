@@ -1,0 +1,21 @@
+<resources>
+    <style name="width0dp">
+        <item name="android:layout_width">0dp</item>
+        <item name="android:layout_height">wrap_content</item>
+    </style>
+
+    <style name="width0dp.darkText">
+        <item name="android:textColor">@color/darkGray</item>
+    </style>
+
+    <style name="width0dp.darkText.center">
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="width0dp.statusText">
+        <item name="android:gravity">center</item>
+        <item name="android:textSize">18sp</item>
+    </style>
+
+    ... ...
+</resources>

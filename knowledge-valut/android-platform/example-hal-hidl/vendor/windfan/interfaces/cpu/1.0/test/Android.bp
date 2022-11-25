@@ -1,0 +1,9 @@
+cc_binary {
+    relative_install_path: "hw",
+    name: "windfan_cpu_tester",
+    srcs: ["CpuTest.cpp"],
+    vendor: true,
+    shared_libs: [
+    	...
+    ],
+}

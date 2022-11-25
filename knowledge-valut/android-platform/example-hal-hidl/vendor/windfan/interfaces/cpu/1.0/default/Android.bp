@@ -1,0 +1,11 @@
+cc_binary {
+	relative_install_path: "hw",
+	name: "vendor.windfan.cpu@1.0-service",
+	init_rc: ["vendor.windfan.cpu@1.0-service.rc"],
+	...
+	vintf_fragments: ["vendor.windfan.cpu@1.0-service.xml"],
+
+	shared_libs: [
+	...
+	],
+}

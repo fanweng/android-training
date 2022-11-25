@@ -1,0 +1,35 @@
+cc_library_shared {
+    name: "libwindfan",
+    vendor: true,
+
+    defaults: ["libwindfan-libs"],
+
+    cflags: [
+        "-Wall",
+        "-Werror",
+        "-Wno-unused-parameter",
+    ],
+
+    srcs: [
+        "com_windfan_Cpu.cpp",
+        "onload.cpp",
+    ],
+}
+
+cc_defaults {
+    name: "libwindfan-libs",
+
+    shared_libs: [
+        "libbase",
+        "libcutils",
+        "liblog",
+        "libhardware",
+        "libhidlbase",
+        "libutils",
+        "vendor.windfan.cpu@1.0"
+    ],
+
+    header_libs: [
+        "jni_headers",
+    ],
+}

@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/middleGuideLine"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintGuide_percent="0.5"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    ... ...
+
+    <Button
+        android:id="@+id/performanceButton"
+        style="@style/width0dp"
+        android:layout_marginTop="20dp"
+        android:onClick="onClick"
+        android:text="performance"
+        app:layout_constraintEnd_toStartOf="@+id/middleGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/scalingGovernorTV" />
+
+    <Button
+        android:id="@+id/powersaveButton"
+        style="@style/width0dp"
+        android:onClick="onClick"
+        android:text="powersave"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleGuideLine"
+        app:layout_constraintTop_toTopOf="@id/performanceButton" />
+
+    <Button
+        android:id="@+id/schedutilButton"
+        style="@style/width0dp"
+        android:onClick="onClick"
+        android:text="schedutil"
+        app:layout_constraintEnd_toStartOf="@+id/middleGuideLine"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/performanceButton" />
+
+    <Button
+        android:id="@+id/conservativeButton"
+        style="@style/width0dp"
+        android:onClick="onClick"
+        android:text="conservative"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/middleGuideLine"
+        app:layout_constraintTop_toBottomOf="@id/performanceButton" />
+
+    ... ...
+
+</androidx.constraintlayout.widget.ConstraintLayout>

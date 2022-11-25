@@ -1,0 +1,54 @@
+java_sdk_library {
+    name: "com.windfan",
+    vendor: true,
+
+    srcs: [
+        "java/**/*.java",
+    ],
+
+    sdk_version: "current",
+    compile_dex: true,
+    api_packages: ["com.windfan"],
+}
+
+filegroup {
+    name: "com.windfan.api.public.latest",
+    srcs: [
+        "api/current.txt",
+    ],
+}
+
+filegroup {
+    name: "com.windfan-removed.api.public.latest",
+    srcs: [
+        "api/removed.txt",
+    ],
+}
+
+filegroup {
+    name: "com.windfan.api.system.latest",
+    srcs: [
+        "api/system-current.txt",
+    ],
+}
+
+filegroup {
+    name: "com.windfan-removed.api.system.latest",
+    srcs: [
+        "api/system-removed.txt",
+    ],
+}
+
+filegroup {
+    name: "com.windfan-incompatibilities.api.public.latest",
+    srcs: [
+        "api/incompatibilities.txt",
+    ],
+}
+
+filegroup {
+    name: "com.windfan-incompatibilities.api.system.latest",
+    srcs: [
+        "api/system-incompatibilities.txt",
+    ],
+}
