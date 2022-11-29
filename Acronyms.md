@@ -23,5 +23,6 @@ NBAIO | Non-Blocking Audio I/O Interface
 ODM | Original Design Manufacturer
 OSS | Open Sound System
 OTA | Over-the-Air
+TE | Type Enforcement
 URI | Uniform Resource Identifier
 VTS | Vendor Test Suite
