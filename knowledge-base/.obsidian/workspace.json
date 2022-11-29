@@ -13,10 +13,18 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "android-platform/example-hal-hidl.md",
+                "file": "android-platform/boot-process.md",
                 "mode": "source",
                 "source": true
               }
+            }
+          },
+          {
+            "id": "95754bf511cf735b",
+            "type": "leaf",
+            "state": {
+              "type": "graph",
+              "state": {}
             }
           }
         ]
@@ -71,7 +79,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "android-platform/example-hal-hidl.md"
+                "file": "android-platform/boot-process.md"
               }
             }
           }
@@ -96,7 +104,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "android-platform/example-hal-hidl.md",
+                "file": "android-platform/boot-process.md",
                 "collapseAll": true,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -142,15 +150,15 @@
   },
   "active": "c05158c61b01c4dd",
   "lastOpenFiles": [
+    "README.md",
+    "android-platform/boot-process.md",
+    "android-platform/os-architecture.md",
+    "android-platform/example-hal-aidl/example-hal-aidl.md",
+    "android-platform/example-hal-hidl/example-hal-hidl.md",
     "build-process/android-build-system.md",
     "android-platform/example-hal-hidl.md",
     "android-platform/security.md",
     "android-platform/hal.md",
-    "android-platform/hidl.md",
-    "android-platform/linux-kernel.md",
-    "android-platform/os-architecture.md",
-    "android-platform/sdk.md",
-    "android-platform/aosp.md",
-    "build-process/gradle.md"
+    "android-platform/hidl.md"
   ]
 }

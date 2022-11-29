@@ -4,6 +4,7 @@ AIDL | Android Interface Definition Language
 ALSA | Advanced Linux Sound Architecture
 ANR | Application Not Responding
 AOSP | Android Open Source Project
+AOT | Ahead of Time
 ART | Android Runtime
 AVB | Audio Video Bridging
 BSP | Board-Specific Package
@@ -14,6 +15,7 @@ GKI | Generic Kernel Image
 GSI | Generic System Image
 GMS | Google Mobile Services
 HIDL | HAL Interface Definition Language
+JIT | Just in Time
 JNI | Java Native Interface
 KMI | Kernel Module Interface
 MAC | Mandatory Access Control
